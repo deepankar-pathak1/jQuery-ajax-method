@@ -1,0 +1,14 @@
+if ($('input[name=gender]:checked').length > 0) {
+    // do something here
+}
+Let me break that down into pieces to cover it more clearly. jQuery processes things from left to right.
+
+input[name=gender]:checked
+
+input limits it to input tags.
+
+[name=gender] limits it to tags with the name gender within the previous group.
+
+:checked limits it to checkboxes/radio buttons that are selected within the previous group.
+
+If you want to avoid this altogether, mark one of the radio buttons as checked (checked="checked") in the HTML code, which would guarantee that one radio button is always selected.
