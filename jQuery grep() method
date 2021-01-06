@@ -1,0 +1,62 @@
+jQuery grep() method
+The grep() method in jQuery finds the array elements that satisfy the given filter function. 
+It does not affect the original array. 
+This method returns the filtered array, i.e., the elements that satisfy the given filter function.
+
+Syntax
+The commonly used syntax of grep() method is given as follows.
+
+jQuery.grep(array, function(element, index) [, invert])  
+
+
+-----
+
+
+array: It is the mandatory parameter. It specifies an array-like object to search.
+
+function(element, index): This specifies a function which is used as a filter function.
+It accepts two arguments named as element and index in which the first argument holds the array element, and the second argument holds the index of the corresponding element. 
+It returns a Boolean value, either true or false. 
+It is also a mandatory parameter. This function processes each array element. 
+If the element passes the condition, only then it will be included in the result.
+
+invert: It is an optional parameter. It accepts Boolean values. Its default value is false. 
+If it is specified to false or not passed, the grep() function returns the array elements for which the filter function returns true.
+If this parameter is specified to true, the grep() function returns the array elements for which the filter function returns false.
+
+Now, let's see some illustrations of using the grep() method.
+
+
+---
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title> jQuery grep() method </title>  
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>  
+</head>  
+<body>  
+<h4> This is an example of using the grep() method. </h4>  
+<p> Click the following button to see the effect. </p>  
+<button id = "btn"> Click me </button>  
+<p id = "p1"> </p>  
+<p id = "p2"> </p>  
+<script>  
+$(document).ready(function() {  
+$("#btn").click(function(){  
+var arr = [ 12, 20, 60, 43, 56, 41, 60, 19, 42, 60, 78, 18];  
+$("#p1").html("Array elements before applying the <b> grep() </b> method: " + arr + "<br>");  
+arr = $.grep(arr, function(element, index) {  
+return ( element%2 == 0 && index >= 2 );  
+});  
+$("#p2").html("Array elements after applying the <b> grep() </b> method: " + arr);  
+});  
+});  
+</script>  
+</body>  
+  
+</html>
+
+
+---
+
