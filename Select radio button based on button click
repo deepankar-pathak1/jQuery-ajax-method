@@ -1,0 +1,61 @@
+<!DOCTYPE html>  
+<html>  
+  
+<head>  
+    <title> Get Selected radio button value exmaple </title>  
+    <!-- Add jQuery and Bootstrap CDN -->  
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">  
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"> </script>  
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js">  
+    </script>  
+</head>  
+  
+<body>  
+    <form name = "jd" action="">  
+        <div class = "wrapper">  
+            <h1 align = "center" style="margin-top: 40px; padding: 20px;"> Get radio button value example </h1>  
+            <div class = "row">  
+                <div class = "col-md-4 offset-4">  
+                    <div class = "card mt-3">  
+                        <div class = "form-group text-center bg-light">  
+  
+                            <div class = "card-header bg-success">  
+                                <h2 class = "form-group-heading text-center"> Seleat a Course </h2>  
+                            </div>  
+                            <form action = "/action_page.php">  
+                                <label>  
+                                    <input type = "radio" name = "course" onclick = "myCourseFunction(this.value)"  
+                                        value = "Java">Java  
+                                </label>  
+                                <label>  
+                                    <input type = "radio" name = "course" onclick = "myCourseFunction(this.value)"  
+                                        value = "C Language">C Language  
+                                </label>  
+                                <label>  
+                                <input type = "radio" name = "course" onclick = "myCourseFunction(this.value)"  
+                                    value = "C++">C++  
+                                    </label>  
+                                    <label>  
+                                <input type = "radio" name = "course" onclick = "myCourseFunction(this.value)"  
+                                    value = "Python">Python  
+                                    </label>  
+                                <br><br>  
+  
+                                Your Selected Course is: <input type = "text" id = "result">  
+                                <input type = "submit" value = "Submit">  
+                            </form>  
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </form>  
+    <!-- Add script -->  
+    <script>  
+        function myCourseFunction(course) {  
+            document.getElementById("result").value = course;  
+        }  
+    </script>  
+</body>  
+  
+</html>  
