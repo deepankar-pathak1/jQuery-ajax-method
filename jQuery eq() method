@@ -1,0 +1,48 @@
+jQuery eq() method
+The eq() method in jQuery returns an element with the given index. 
+This method reduces the set of elements to the one with a specific index. The index can either be positive or negative.
+If we use a negative index, the index count starts from the end of the list of selected elements.
+
+Suppose we have a jQuery object representing the set of elements, so the eq() method constructs a new JQuery object that contains one element of that set.
+
+This eq() method is same as index method that we have learnt in python.
+
+$(selector).eq(index)  
+
+index: It is the mandatory parameter that specifies the element's index. 
+It can be specified as a positive or negative number. 
+The negative index causes an index count to be started from the end of the list rather than the beginning. 
+It always starts with the 0 position, so the index value of the first value is 0 instead of 1.
+
+-------------
+
+<html>
+
+<head>
+<title> jQuery eq() method </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$(".para").eq(1).css({ "color": "red", "fontSize": "20px", "fontWeight": "bold" });
+$(".para").eq(3).css({ "color": "blue", "fontSize": "20px", "fontWeight": "bold" });
+});
+</script>
+</head>
+
+<body>
+<h3> This is an example of using the eq() method. </h3>
+<h4> Index always starts with 0, so the position of first value is 0 instead of 1. </h4>
+<p class = "para"> First Paragraph </p>
+<p class = "para"> Second Paragraph </p>
+<p class = "para"> Third Paragraph </p>
+<p class = "para"> Fourth Paragraph </p>
+<p class = "para"> Fifth Paragraph </p>
+</body>
+
+</html>
+
+ 
+
+---
+
+Here we have eq(1) which means that,we want 2 number of paragraph tag.
